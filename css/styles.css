@@ -1,0 +1,268 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #1f3d3a;
+
+    background-color: #f6f1e8;
+    background-image: url("../assets/images/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
+
+.script { 
+    font-family: 'Great Vibes', cursive; 
+    font-size: 60px; 
+}
+
+.serif { font-family: 'Playfair Display', serif; }
+.sans { font-family: 'Montserrat', sans-serif; }
+.italic { font-style: italic; }
+
+.date { 
+    font-size: 80px; 
+    margin: 10px 0; 
+}
+
+.gold-line { 
+    width: 80px; 
+    height: 2px; 
+    background: #c6a75e; 
+    margin: 20px auto; 
+}
+
+.gold-line.small { 
+    width: 50px; 
+}
+
+.section-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 60px 30px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.count-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.count-box {
+    background: #f3ede3;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count-box p { 
+    font-size: 28px; 
+    margin: 0; 
+    font-weight: bold; 
+}
+
+.map-full { 
+    width: 100%; 
+    border-radius: 20px; 
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden { 
+    display: none; 
+}
+
+/* SOBRE */
+
+#envelope-screen {
+    position: fixed;
+    inset: 0;
+    background: #f6f1e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: transform 1s ease;
+}
+
+.envelope {
+    position: relative;
+    width: 320px;
+    height: 200px;
+}
+
+.envelope-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e8dfd0;
+    border-radius: 10px;
+}
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #d4c8b5;
+    clip-path: polygon(0 0, 100% 0, 50% 60%);
+    transform-origin: top;
+    transition: transform 1s ease;
+}
+
+.seal {
+    position: absolute;
+    width: 80px;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* ===== CARRUSEL DEFINITIVO ===== */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #f3ede3;
+    width: 100%;
+    height: 450px;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 350px;
+    }
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Botones */
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 28px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+.carousel-btn:hover {
+    background: #1f3d3a;
+    color: white;
+}
+
+/* ===== HOSPEDAJE ===== */
+
+.hospedaje-text {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hospedaje-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.hospedaje-column {
+    min-width: 250px;
+}
+
+.hospedaje-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #1f3d3a99;
+}
+
+.hospedaje-list {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.subtle-link {
+    font-size: 12px;
+    color: #8c857a;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.subtle-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ===== REGALO SUTIL FOOTER ===== */
+
+.gift-footer {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 40px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.gift-footer:hover {
+    opacity: 1;
+}
+
+.gift-footer img {
+    width: 190px;
+    transition: transform 0.3s ease;
+}
+
+.gift-footer img:hover {
+    transform: scale(1.08);
+}
