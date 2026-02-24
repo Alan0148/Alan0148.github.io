@@ -154,9 +154,9 @@ body {
     height: 450px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 668px) {
     .carousel {
-        height: 350px;
+        height: 250px;
     }
 }
 
@@ -265,4 +265,5 @@ body {
 
 .gift-footer img:hover {
     transform: scale(1.08);
+
 }
