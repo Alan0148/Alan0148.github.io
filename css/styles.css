@@ -154,9 +154,9 @@ body {
     height: 450px;
 }
 
-@media (max-width: 668px) {
+@media (max-width: 600px) {
     .carousel {
-        height: 250px;
+        height: 200px;
     }
 }
 
@@ -267,3 +267,4 @@ body {
     transform: scale(1.08);
 
 }
+
